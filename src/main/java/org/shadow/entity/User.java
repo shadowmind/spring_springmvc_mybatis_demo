@@ -1,18 +1,23 @@
 package org.shadow.entity;
 
 public class User {
-	
+
 	private long id;
 
 	private String name;
-	
+
 	private String password;
-	
+
 	private String email;
-	
+
 	private String createTime;
-	
+
 	private String lastTime;
+
+	@Override
+	public String toString() {
+		return "id:" + id + " name:" + name + " email:" + email + " createTime:" + createTime + " lastTime:" + lastTime;
+	}
 
 	public long getId() {
 		return id;

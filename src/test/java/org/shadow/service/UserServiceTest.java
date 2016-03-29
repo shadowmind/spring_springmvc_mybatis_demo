@@ -2,24 +2,22 @@ package org.shadow.service;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.shadow.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = { "classpath:spring.xml", "classpath:spring-mybatis.xml" })
-public class LoginServiceTest {
+public class UserServiceTest {
 
 	@Autowired
-	private LoginService loginService;
+	private UserService userService;
 
 	@Test
-	public void testVerify() {
-		String name = "admin";
-		String password = "123456";
-
-		boolean result = loginService.verity(name, password);
-		System.err.println("verify result:" + result);
+	public void testGetUserInfo() {
+		User user = userService.getUserInfo(1);
+		System.err.println(user.toString());
 	}
 
 }
