@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.shadow.dao.UserMapper">
+
+	<!-- 根据ID获取用户信息 -->
+	<select id="getUserInfo" resultType="org.shadow.entity.User">
+		Select id, name, email, createTime, lastTime From user Where id = #{id}
+	</select>
+
+	<!-- 获取用户信息列表 -->
+	<select id="getUserInfoList" resultType="org.shadow.entity.User">
+		Select id, name, email, createTime, lastTime From user
+	</select>
+</mapper>
