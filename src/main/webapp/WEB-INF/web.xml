@@ -62,4 +62,16 @@
 	<welcome-file-list>
 		<welcome-file>index.jsp</welcome-file>
 	</welcome-file-list>
+	
+	<!-- 错误页 404 -->
+	<error-page>
+	   <error-code>404</error-code>
+	   <location>/WEB-INF/views/error/404.jsp</location>
+	</error-page>
+	
+	<!-- 异常页面 -->
+	<error-page>
+	   <exception-type>java.lang.Exception</exception-type>
+	   <location>/WEB-INF/views/error/exception.jsp</location>
+	</error-page>
 </web-app>

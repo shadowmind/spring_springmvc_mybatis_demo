@@ -48,9 +48,14 @@
 	}
 
 	function getUserInfoListCallback(msg) {
-		alert(" name:" + msg[1].name + "\r\n email:" + msg[1].email
-				+ "\r\n createTime:" + msg[1].createTime + "\r\n lastTime:"
-				+ msg[1].lastTime);
+		var temp = "";
+		for (var i = 0; i < msg.length; i++) {
+			temp += " name:" + msg[i].name + "\r email:" + msg[i].email
+					+ "\r createTime:" + msg[i].createTime + "\r lastTime:"
+					+ msg[i].lastTime + "\r\n";
+		}
+
+		alert(temp);
 	}
 </script>
 </head>

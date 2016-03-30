@@ -18,10 +18,10 @@ public class LoginController {
 	@ResponseBody
 	public String verify(@RequestParam(value = "name", required = true) String name,
 			@RequestParam(value = "password", required = true) String password) {
-		
+
 		if (loginService.verity(name, password)) {
 			return "success";
-		} 
+		}
 		return "failed";
 	}
 
