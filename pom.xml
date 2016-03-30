@@ -10,7 +10,7 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<spring.version>4.1.4.RELEASE</spring.version>
+		<spring.version>4.2.4.RELEASE</spring.version>
 		<jackson.version>2.5.0</jackson.version>
 	</properties>
 
@@ -103,8 +103,9 @@
 		<dependency>
 			<groupId>com.alibaba</groupId>
 			<artifactId>druid</artifactId>
-			<version>1.0.12</version>
+			<version>1.0.18</version>
 		</dependency>
+
 
 		<!-- spring aop 使用 -->
 		<dependency>
@@ -135,7 +136,12 @@
 			<version>${jackson.version}</version>
 		</dependency>
 
-		<!-- jstl标签库 -->
+		<!-- servlet -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>3.1.0</version>
+		</dependency>
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>jstl</artifactId>
