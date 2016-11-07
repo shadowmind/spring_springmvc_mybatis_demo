@@ -1,5 +1,6 @@
 package org.shadow.service;
 
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.shadow.entity.User;
@@ -15,9 +16,22 @@ public class UserServiceTest {
 	private UserService userService;
 
 	@Test
-	public void testGetUserInfo() {
-		User user = userService.getUserInfo(1);
+	public void getUserTest() {
+		User user = userService.getUser(1);
 		System.err.println(user.toString());
+	}
+
+	@Test
+	@Ignore
+	public void insertUserTest() {
+		User user = new User();
+		user.setName("admin");
+		user.setPassword("1");
+		user.setPassword("1");
+		user.setGender("男");
+		user.setEmail("a@gmail.com");
+
+		userService.insertUser(user);
 	}
 
 }

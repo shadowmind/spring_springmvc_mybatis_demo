@@ -21,14 +21,14 @@ public class UserController {
 	@ResponseBody
 	public User getUserInfo(@PathVariable long id)
 	{
-		return userService.getUserInfo(id);
+		return userService.getUser(id);
 	}
 	
 	@RequestMapping("/users")
 	@ResponseBody
 	public List<User> getUserInfoList()
 	{
-		return userService.getUserInfoList();
+		return userService.getUserList();
 	}
 	
 }

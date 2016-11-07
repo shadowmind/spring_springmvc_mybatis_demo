@@ -8,11 +8,13 @@ public class User {
 
 	private String password;
 
+	private String gender;
+
 	private String email;
 
-	private String createTime;
+	private long createTime;
 
-	private String lastTime;
+	private long lastTime;
 
 	@Override
 	public String toString() {
@@ -51,20 +53,28 @@ public class User {
 		this.email = email;
 	}
 
-	public String getCreateTime() {
+	public long getCreateTime() {
 		return createTime;
 	}
 
-	public void setCreateTime(String createTime) {
+	public void setCreateTime(long createTime) {
 		this.createTime = createTime;
 	}
 
-	public String getLastTime() {
+	public long getLastTime() {
 		return lastTime;
 	}
 
-	public void setLastTime(String lastTime) {
+	public void setLastTime(long lastTime) {
 		this.lastTime = lastTime;
+	}
+
+	public String getGender() {
+		return gender;
+	}
+
+	public void setGender(String gender) {
+		this.gender = gender;
 	}
 
 }

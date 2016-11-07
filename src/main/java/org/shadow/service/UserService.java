@@ -6,7 +6,13 @@ import org.shadow.entity.User;
 
 public interface UserService {
 
-	public User getUserInfo(long id);
+	public User getUser(long id);
+
+	public List<User> getUserList();
+
+	public int insertUser(User user);
+
+	public int deleteUser(long id);
 	
-	public List<User> getUserInfoList();
+	public int changePassword(long id, String newPassword);
 }
